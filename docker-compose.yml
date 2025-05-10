@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mymongo1
+    
+  mymongo1:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    
